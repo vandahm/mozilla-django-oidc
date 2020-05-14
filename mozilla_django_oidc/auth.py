@@ -267,6 +267,7 @@ class OIDCAuthenticationBackend(ModelBackend):
         }
 
         # Get the token
+        print(token_payload)
         token_info = self.get_token(token_payload)
         id_token = token_info.get('id_token')
         access_token = token_info.get('access_token')
